@@ -15,10 +15,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Content-Type", "image/svg+xml")
 	w.Write([]byte(`
-		<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-			<rect stroke="#000" stroke-width="4" fill="` + color + `" x="2" y="2" width="252" height="252" rx="0" ry="0" />
-		</svg>`
-	))
+		<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+			<rect stroke="#000" stroke-width="2" fill="` + color + `" x="1" y="1" width="14" height="14" rx="0" ry="0" />
+		</svg>`))
 }
 
 func main() {
