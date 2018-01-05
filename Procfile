@@ -1,1 +1,1 @@
-web: color
+web: clrs
