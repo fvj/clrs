@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"regexp"
 	"log"
+	"os"
 )
 
 var triplets = regexp.MustCompile(`^(?i)([0-9A-F]{3})|([0-9A-F]{6})$`)
@@ -24,5 +25,5 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":8000", nil))
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), nil))
 }
